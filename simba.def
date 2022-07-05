@@ -104,7 +104,12 @@ Include: software-properties-common
 	#sed -i 's/    gaccept = np\.array(\[i if (gaccept\[i]>0)/#    gaccept = np\.array(\[i if (gaccept\[i]>0)/' /opt/pyloser/loadsim.py
 
 	# Install martini
-	pip install astromartini	
+	#pip install astromartini	
+	cd /opt
+	git clone https://github.com/kyleaoman/martini.git
+	cd martini
+	python setup.py install
+
 
 	# Fix python string decode error
 	pip install h5py==2.10.0
