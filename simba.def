@@ -19,7 +19,7 @@ Include: software-properties-common
 
 
 	export PATH="/anaconda3/bin:$PATH:/opt/pyloser:/opt/analytic"
-	export SPS_HOME="/opt/fsps/"
+	export SPS_HOME="/opt/python-fsps/src/fsps/libfsps"
 	export LC_ALL=C.UTF-8
 	export PYTHONPATH="/opt/analytic:$PYTHONPATH"
 
@@ -86,25 +86,19 @@ Include: software-properties-common
 
 	# Install pyloser
 	cd /opt
-	#git clone https://github.com/cconroy20/fsps
-	#export SPS_HOME="/opt/fsps"
-	#sed -i 's/F90FLAGS := -O3 -cpp /F90FLAGS := -O3 -cpp -fPIC /' /opt/fsps/src/Makefile
-	#cd /opt/fsps/src/
-	#make
-	#cd /opt
 	git clone https://github.com/dfm/python-fsps.git
 	cd python-fsps
 	git submodule init
 	git submodule update
+	export SPS_HOME=/opt/python-fsps/src/fsps/libfsps
+	git checkout tags/v0.4.1
 	python setup.py install
 	cd /opt
 	git clone https://bitbucket.org/romeeld/pyloser.git
 	sed -i '1 i\#!/anaconda3/bin/python' /opt/pyloser/pyloser.py
 	chmod +x /opt/pyloser/pyloser.py
-	#sed -i 's/    gaccept = np\.array(\[i if (gaccept\[i]>0)/#    gaccept = np\.array(\[i if (gaccept\[i]>0)/' /opt/pyloser/loadsim.py
 
 	# Install martini
-	#pip install astromartini	
 	cd /opt
 	git clone https://github.com/kyleaoman/martini.git
 	cd martini

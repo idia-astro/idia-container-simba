@@ -1,3 +1,4 @@
-- [440b437 2022-07-05 11:36:33 (HEAD -> main)] Updated Martini to build latest version git repo
-- [ef0f7ab 2021-10-25 12:14:20 (origin/main, origin/HEAD)]  added change log file for change tracking.
+- [39e0b78 2022-07-05 11:43:21 (HEAD -> main, origin/main, origin/HEAD)] Update changelog
+- [440b437 2022-07-05 11:36:33] Updated Martini to build latest version git repo
+- [ef0f7ab 2021-10-25 12:14:20]  added change log file for change tracking.
 - [857e113 2021-10-25 11:59:39] added pysynch: https://github.com/mhardcastle/pysynch and analytic: https://github.com/mhardcastle/analytic packages to container.
