@@ -89,6 +89,9 @@ OSVersion: focal
         cd /opt
         git clone https://github.com/mhardcastle/analytic.git
 
+        # Install ipykernel
+        python -m pip install ipykernel
+
         # Cleanup the container
         apt-get clean
         apt-get autoclean
