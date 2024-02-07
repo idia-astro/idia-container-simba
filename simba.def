@@ -4,8 +4,8 @@ OSVersion: focal
 
 %labels
 
-        APPLICATION_NAME_BASE Ubuntu LTS + Anaconda3 + pyloser + martini
-        OS_VERSION 18.04
+        APPLICATION_NAME_BASE Ubuntu LTS + pyloser + martini
+        OS_VERSION 20.04
 
         SYSTEM_NAME iLifu
         SYSTEM_SINGULARITY_VERSION 3.9.1
